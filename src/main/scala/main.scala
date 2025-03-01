@@ -12,7 +12,9 @@ def unit(): Unit = {
 
     def numberDigits(c: Int, nDigits: Int): Int = if(c == 0)  nDigits  else numberDigits(c / 10, nDigits + 1);
 
-    if(a < 10 && b < 10) return a*b
+    def abs(x: Int) = if(x >= 0) a else -x
+
+    if (abs(a) < 10 && abs(b) < 10) return a * b
 
     val numberDigitA: Int = numberDigits(a, 0) / 2
     val numberDigitB: Int = numberDigits(b, 0) / 2
